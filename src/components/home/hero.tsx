@@ -236,7 +236,10 @@ export default function Hero({ hook, body }: { hook: string; body: string }) {
         </div>
       </div>
 
-      <div ref={scrollCueRef}>
+      <div
+        ref={scrollCueRef}
+        className="pointer-events-none absolute inset-0 z-[2] flex items-center justify-center"
+      >
         <ScrollCue reduce={reduce} />
       </div>
     </section>
@@ -252,7 +255,7 @@ export default function Hero({ hook, body }: { hook: string; body: string }) {
 function ScrollCue({ reduce }: { reduce: boolean | null }) {
   return (
     <motion.div
-      className="relative z-[2] flex flex-col items-center gap-3 pb-10"
+      className="relative z-[2] flex flex-col items-center gap-3"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6, delay: 0.3 }}
