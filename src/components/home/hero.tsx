@@ -140,7 +140,7 @@ export default function Hero({ hook, body }: { hook: string; body: string }) {
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
       onDoubleClick={onDoubleClick}
-      className="relative overflow-hidden veil-0"
+      className="relative flex min-h-screen flex-col overflow-hidden veil-0"
       style={{ perspective: 1000 }}
     >
       {/* Circuit floor + ambient neon bloom */}
@@ -175,7 +175,7 @@ export default function Hero({ hook, body }: { hook: string; body: string }) {
 
       <div
         ref={contentGridRef}
-        className="relative z-[2] mx-auto grid max-w-6xl items-center gap-12 px-6 pb-24 pt-32 md:pb-28 md:pt-36 lg:grid-cols-[1fr_1fr]"
+        className="relative z-[2] mx-auto grid w-full max-w-6xl flex-1 items-center gap-12 px-6 pb-16 pt-32 md:pb-20 md:pt-36 lg:grid-cols-[1fr_1fr]"
       >
         <div>
           <div ref={headlineOuterRef}>
