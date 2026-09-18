@@ -13,7 +13,7 @@ export const founder = {
   photoSrc: "/team/ajith-ilakkuvan.webp",
 
   intro: [
-    "Born and brought up in Pollachi, Tamil Nadu, Ajith Ilakkuvan is an entrepreneur passionate about business, technology, people and creating meaningful impact in the community.",
+    "Ajith Ilakkuvan is from Pollachi, Tamil Nadu — and the founder of Hango, a tech and creative company built to engineer digital growth. He is an entrepreneur, educator, and community leader with a background spanning hospitality, events, photography, marketing, business development, analytics, artificial intelligence, and technology.",
     "His professional journey has taken him across diverse fields including hospitality, events, photography, marketing, business development, analytics, Artificial Intelligence and technology. This exposure to different industries shaped his approach to business — understanding people, identifying opportunities and finding practical solutions rather than looking at problems from just one perspective.",
     "Today, Ajith is the Founder & CEO of Hango, a digital growth company that brings together marketing, creativity, technology and AI to help businesses build stronger digital presence and achieve measurable growth.",
   ],
@@ -45,7 +45,7 @@ export const founder = {
       paragraphs: ["Ajith founded Hango with a simple belief:"],
       quote: "Technology should not replace human thinking. It should amplify it.",
       closing: [
-        "He envisions Hango as more than a conventional digital marketing agency. His goal is to build a full-stack digital growth partner that understands businesses deeply, develops thoughtful strategies and combines human creativity with AI and technology to create practical solutions.",
+        "He envisions Hango as a tech and creative company — one that builds software, produces content, and engineers digital growth for businesses that are done settling for average. His goal is to combine human creativity with AI and technology to create practical, results-driven solutions — and to demonstrate that world-class digital thinking, software capability, and creative production can be built from a place he proudly calls home.",
         "From Pollachi to businesses beyond the region, his vision is to build a company that demonstrates that world-class digital thinking, creativity and technology can be built from a place he proudly calls home.",
       ],
     },

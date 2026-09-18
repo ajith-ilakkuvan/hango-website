@@ -1,7 +1,7 @@
 // Sourced from the Hango brand handbook (written content only — the
 // handbook's color/type guidelines are superseded by the final logo assets).
 
-export const tagline = "Engineering Digital Growth";
+export const tagline = "Tech that builds. Content that converts. Strategy that grows.";
 
 export const elevatorPitch = {
   hook: "Tech that builds. Content that converts. Strategy that grows.",
@@ -17,16 +17,36 @@ export const introStatement = {
 };
 
 export const about = [
-  "Hango is a full-stack digital growth partner — a company built at the intersection of marketing, advertising, technology, and digital transformation. Unlike conventional digital marketing agencies that focus solely on campaigns and content, Hango operates as an integrated growth engine that takes a business from its current digital state to where it truly deserves to be.",
-  "Founded on the belief that businesses deserve more than vanity metrics — more than likes, shares, and follower counts — Hango was built to deliver what businesses actually need: qualified leads, consistent sales, and sustainable revenue growth.",
-  "The name Hango is rooted in purpose. To hang high — to elevate every brand, product, and service we partner with, and place it precisely where its intended audience can see it, trust it, and choose it.",
+  "Hango is a tech and creative company built for businesses that want more than a marketing agency. We build AI-powered software and custom websites, produce ad films and brand videos, and engineer digital presence across social media — combining technology, creativity, and strategy into one integrated system that delivers real, measurable growth. We are based in Coimbatore, Tamil Nadu — and we bring world-class digital thinking, software capability, and creative production to businesses across South India and beyond.",
 ];
 
 export const mission =
-  "To engineer measurable digital growth through innovation, creativity, and technology.";
+  "To build technology, create content, and engineer digital growth — for businesses that are serious about results.";
 
 export const vision =
-  "To be the most trusted digital growth partner for businesses across industries.";
+  "To be South India's most trusted tech and creative growth partner — known for the quality of what we build, the creativity of what we produce, and the results we deliver.";
+
+export const whatMakesDifferent = {
+  title: "What makes Hango different",
+  points: [
+    {
+      title: "We Are a Tech Company",
+      body: "We don't just run campaigns — we build the technology behind your business. Custom software with AI features, high-performance websites, and digital tools that solve real problems and scale with you.",
+    },
+    {
+      title: "We Are a Creative Studio",
+      body: "Our in-house creative team specializes in video production and ad films — from concept to final cut. We produce content that does more than look good — it moves people to act.",
+    },
+    {
+      title: "We Engineer Digital Presence",
+      body: "We use social media platforms as precision tools. Before we post a single piece of content, we study your business deeply — your audience, your market, your goals — then build a digital presence that is intentional, consistent, and engineered to grow.",
+    },
+    {
+      title: "We Think in Systems",
+      body: "Technology, marketing, creative production, and strategy are not separate departments at Hango. They work as one unified system — built around your business and oriented toward one outcome: growth.",
+    },
+  ],
+};
 
 export const coreValues = [
   {
@@ -90,13 +110,32 @@ export const growthStack = [
 export const growthEnginePullQuote =
   "We believe every business deserves a growth engine — not just marketing.";
 
-export const whyHango = [
-  "Strategy-driven approach",
-  "Performance focused",
-  "AI-powered solutions",
-  "End-to-end services",
-  "Creative excellence",
-  "Long-term growth partner",
+export const whatWeDo = [
+  {
+    title: "Custom Software Development",
+    description:
+      "We build AI-powered software tailored to how your business works — from internal tools to client-facing platforms.",
+  },
+  {
+    title: "Website Development",
+    description:
+      "High-performance, custom-built websites designed to convert visitors into customers.",
+  },
+  {
+    title: "Digital Marketing Management",
+    description:
+      "Full-service monthly management of your digital presence — SEO, SEM, social media, performance advertising, and content.",
+  },
+  {
+    title: "Video Production & Ad Films",
+    description:
+      "In-house creative team specializing in ad films, brand videos, reels, and documentary-style content — end to end.",
+  },
+  {
+    title: "Photography & Design",
+    description:
+      "Product photography, brand campaigns, graphic design, and print collateral — all under one roof.",
+  },
 ];
 
 export const targetAudience = [
