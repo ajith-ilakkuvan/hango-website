@@ -1,17 +1,17 @@
+import Image from "next/image";
 import type { FounderSection } from "@/data/founder";
 
 /**
- * Editorial founder profile: a photo frame (placeholder until a real photo
- * is supplied — swap the frame's contents for a next/image once one lands)
- * sits alongside the narrative, which runs as a sequence of titled sections
- * with the occasional pull-quote, closing on the guiding principles and a
- * signature block.
+ * Editorial founder profile: a photo frame sits alongside the narrative,
+ * which runs as a sequence of titled sections with the occasional
+ * pull-quote, closing on the guiding principles and a signature block.
  */
 export default function FounderSpotlight({
   name,
   role,
   tags,
   location,
+  photoSrc,
   intro,
   sections,
   principles,
@@ -21,34 +21,27 @@ export default function FounderSpotlight({
   role: string;
   tags: readonly string[];
   location: string;
+  photoSrc: string;
   intro: readonly string[];
   sections: readonly FounderSection[];
   principles: readonly string[];
   tagline: string;
 }) {
-  const initials = name
-    .split(" ")
-    .map((part) => part[0])
-    .join("");
-
   return (
     <div className="relative mx-auto max-w-6xl px-6">
       <h2 className="max-w-2xl text-3xl font-bold text-ink md:text-5xl">Meet the Founder</h2>
 
       <div className="mt-12 grid gap-12 lg:grid-cols-[320px_1fr] lg:gap-16">
         <div className="lg:sticky lg:top-28 lg:self-start">
-          <div className="edge-light circuit-floor relative aspect-square w-full max-w-[320px] overflow-hidden rounded-[18px] border border-ink/10 bg-[var(--color-surface-2)]/70">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span
-                className="text-6xl font-bold text-brand-red/80"
-                style={{ filter: "drop-shadow(0 0 24px rgba(251,54,64,0.35))" }}
-              >
-                {initials}
-              </span>
-            </div>
-            <span className="absolute bottom-4 left-1/2 -translate-x-1/2 text-xs uppercase tracking-wide text-ink/35">
-              Photo coming soon
-            </span>
+          <div className="edge-light circuit-floor relative aspect-[4/5] w-full max-w-[320px] overflow-hidden rounded-[18px] border border-ink/10 bg-[var(--color-surface-0)]">
+            <Image
+              src={photoSrc}
+              alt={name}
+              fill
+              sizes="(min-width: 1024px) 320px, 60vw"
+              className="object-cover"
+              priority
+            />
           </div>
 
           <h3 className="mt-6 text-xl font-semibold text-ink">{name}</h3>

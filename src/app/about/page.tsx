@@ -121,6 +121,7 @@ export default function AboutPage() {
           role={founder.role}
           tags={founder.tags}
           location={founder.location}
+          photoSrc={founder.photoSrc}
           intro={founder.intro}
           sections={founder.sections}
           principles={founder.principles}

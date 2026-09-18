@@ -10,6 +10,7 @@ export const founder = {
   role: "Founder & CEO, Hango",
   tags: ["Entrepreneur", "Educator", "Community Leader"],
   location: "Pollachi, Tamil Nadu",
+  photoSrc: "/team/ajith-ilakkuvan.webp",
 
   intro: [
     "Born and brought up in Pollachi, Tamil Nadu, Ajith Ilakkuvan is an entrepreneur passionate about business, technology, people and creating meaningful impact in the community.",
