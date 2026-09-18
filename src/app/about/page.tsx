@@ -5,6 +5,7 @@ import MorphField from "@/components/motion/morph-field";
 import ScrollScene from "@/components/motion/scroll-scene";
 import PopRows from "@/components/motion/pop-rows";
 import PopCard from "@/components/motion/pop-card";
+import FounderSpotlight from "@/components/about/founder-spotlight";
 import {
   about,
   mission,
@@ -13,7 +14,9 @@ import {
   targetAudience,
   elevatorPitch,
   whyHango,
+  tagline,
 } from "@/data/company";
+import { founder } from "@/data/founder";
 
 export const metadata: Metadata = {
   title: "About",
@@ -111,6 +114,22 @@ export default function AboutPage() {
 
       <ScrollScene
         className="veil-1 py-20 md:py-28"
+        bg={<div className="circuit-floor absolute inset-0 opacity-60" />}
+      >
+        <FounderSpotlight
+          name={founder.name}
+          role={founder.role}
+          tags={founder.tags}
+          location={founder.location}
+          intro={founder.intro}
+          sections={founder.sections}
+          principles={founder.principles}
+          tagline={tagline}
+        />
+      </ScrollScene>
+
+      <ScrollScene
+        className="veil-0 py-20 md:py-28"
         bg={<div className="bg-grid absolute inset-0 opacity-60" />}
       >
         <div className="relative mx-auto max-w-6xl px-6">
