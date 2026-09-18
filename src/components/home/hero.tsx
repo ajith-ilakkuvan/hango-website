@@ -237,30 +237,49 @@ export default function Hero({ hook, body }: { hook: string; body: string }) {
       </div>
 
       <div ref={scrollCueRef}>
-        <ScrollCue />
+        <ScrollCue reduce={reduce} />
       </div>
     </section>
   );
 }
 
-function ScrollCue() {
+/**
+ * Loud on purpose: the headline itself stays invisible until the visitor
+ * scrolls (see the timeline above), so on load the hero is otherwise almost
+ * empty. Without a clear, high-contrast prompt here, that reads as a stuck
+ * page rather than a scroll-driven reveal.
+ */
+function ScrollCue({ reduce }: { reduce: boolean | null }) {
   return (
     <motion.div
-      className="relative z-[2] flex flex-col items-center gap-2 pb-10"
+      className="relative z-[2] flex flex-col items-center gap-3 pb-10"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.6, delay: 0.4 }}
+      transition={{ duration: 0.6, delay: 0.3 }}
       aria-hidden="true"
     >
-      <div className="flex h-9 w-[22px] items-start justify-center rounded-full border border-ink/25 p-1.5">
+      <span className="text-xs font-semibold uppercase tracking-[0.2em] text-ink/70">
+        Scroll Down
+      </span>
+
+      <div className="flex h-10 w-6 items-start justify-center rounded-full border border-ink/40 p-1.5">
         <motion.span
-          className="block h-1.5 w-1 rounded-full bg-brand-red"
+          className="block h-2 w-1 rounded-full bg-brand-red"
           style={{ boxShadow: "0 0 10px rgba(251,54,64,0.9)" }}
-          animate={{ y: [0, 9, 0], opacity: [1, 0.3, 1] }}
-          transition={{ duration: 1.9, repeat: Infinity, ease: "easeInOut" }}
+          animate={reduce ? { opacity: 1 } : { y: [0, 10, 0], opacity: [1, 0.3, 1] }}
+          transition={reduce ? undefined : { duration: 1.9, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
-      <span className="text-xs font-medium tracking-wide text-ink/35">Scroll to Explore</span>
+
+      <motion.svg
+        viewBox="0 0 20 20"
+        className="h-4 w-4 text-brand-red"
+        style={{ filter: "drop-shadow(0 0 6px rgba(251,54,64,0.7))" }}
+        animate={reduce ? { opacity: 0.9 } : { y: [0, 6, 0], opacity: [0.9, 0.3, 0.9] }}
+        transition={reduce ? undefined : { duration: 1.9, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+      >
+        <path fill="currentColor" d="M10 13.4 3.6 7l1.4-1.4L10 10.6l5-5L16.4 7z" />
+      </motion.svg>
     </motion.div>
   );
 }
