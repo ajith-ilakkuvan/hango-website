@@ -24,7 +24,9 @@ export default function IntroStatement({
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, ease: EASE }}
       >
-        <h2 className="text-3xl font-bold text-ink md:text-5xl lg:text-6xl">{heading}</h2>
+        <h2 className="kinetic-accent neon-text text-3xl font-bold md:text-5xl lg:text-6xl">
+          {heading}
+        </h2>
         <div className="mx-auto mt-8 max-w-2xl space-y-5 text-lg text-ink/60 md:text-xl">
           {paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
