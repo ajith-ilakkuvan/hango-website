@@ -8,6 +8,14 @@ export const elevatorPitch = {
   body: "We are Hango — a full-stack digital growth partner built for businesses that are done settling for likes and followers. We combine strategic marketing, performance advertising, technology, and branding into one integrated system that delivers what actually matters: qualified leads, consistent sales, and real revenue.",
 };
 
+export const introStatement = {
+  heading: "AI-Powered Digital Marketing Company in Pollachi",
+  paragraphs: [
+    "We combine AI, creativity, technology, and marketing to help businesses grow in the digital world.",
+    "From strategy and social media to advertising, websites and AI-powered solutions, Hango helps businesses build a stronger digital presence and turn attention into measurable growth.",
+  ],
+};
+
 export const about = [
   "Hango is a full-stack digital growth partner — a company built at the intersection of marketing, advertising, technology, and digital transformation. Unlike conventional digital marketing agencies that focus solely on campaigns and content, Hango operates as an integrated growth engine that takes a business from its current digital state to where it truly deserves to be.",
   "Founded on the belief that businesses deserve more than vanity metrics — more than likes, shares, and follower counts — Hango was built to deliver what businesses actually need: qualified leads, consistent sales, and sustainable revenue growth.",
