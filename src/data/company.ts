@@ -4,8 +4,8 @@
 export const tagline = "Engineering Digital Growth";
 
 export const elevatorPitch = {
-  hook: "Most agencies chase clicks. Hango engineers growth.",
-  body: "We are Hango — a full-stack digital growth partner built for businesses that are done settling for likes and followers. We combine strategic marketing, performance advertising, technology, and branding into one integrated system that delivers what actually matters: qualified leads, consistent sales, and real revenue.",
+  hook: "Tech that builds. Content that converts. Strategy that grows.",
+  body: "We develop AI-powered software and websites, produce ad films and brand videos, and engineer your business's digital presence across every platform — because we take the time to understand your business before we touch your marketing.",
 };
 
 export const introStatement = {
