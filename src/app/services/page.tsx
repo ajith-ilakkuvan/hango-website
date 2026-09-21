@@ -13,11 +13,18 @@ export const metadata: Metadata = {
     "Digital marketing retainers and one-time project services from Hango — SEO, ads, content, brand design, and web development.",
 };
 
+// Services read in ascending order of value: technology first, then the
+// monthly retainer, then creative production, performance, and support
+// services. The retainer keeps its own tier-card layout, so the flat list
+// is split around it rather than interleaved into one PopRows.
+const techServices = projectServices.slice(0, 2);
+const remainingServices = projectServices.slice(2);
+
 export default function ServicesPage() {
   return (
     <>
       <PageHero
-        title="Marketing retainers and one-time projects, priced to fit."
+        title="Technology, creativity, and strategy — engineered for growth."
         motif="layers"
       />
 
@@ -26,10 +33,41 @@ export default function ServicesPage() {
         bg={<div className="bg-grid absolute inset-0 opacity-60" />}
       >
         <div className="relative mx-auto max-w-6xl px-6">
+          <h2 className="text-2xl font-bold text-ink md:text-3xl">Our Services</h2>
+          <div className="mt-12">
+            <PopRows
+              items={techServices.map((service) => ({
+                key: service.slug,
+                title: service.title,
+                description: (
+                  <>
+                    <span className="font-semibold text-ink">{service.tagline}</span>{" "}
+                    {service.description}
+                  </>
+                ),
+                sub: service.includes.join(" · "),
+                meta: service.pricingNote,
+              }))}
+            />
+          </div>
+        </div>
+      </ScrollScene>
+
+      <ScrollScene
+        className="veil-0 py-20 md:py-28"
+        bg={<div className="bg-grid absolute inset-0 opacity-60" />}
+      >
+        <div className="relative mx-auto max-w-6xl px-6">
           <h2 className="text-2xl font-bold text-ink md:text-3xl">{retainerService.title}</h2>
-          <p className="mt-2 max-w-2xl text-ink/55">{retainerService.description}</p>
+          <p className="mt-2 max-w-2xl text-ink/55">
+            <span className="font-semibold text-ink">{retainerService.tagline}</span>{" "}
+            {retainerService.description}
+          </p>
           <p className="mt-3 max-w-2xl text-sm text-ink/35">
             {retainerService.includes.join(" · ")}
+          </p>
+          <p className="mt-2 text-xs font-medium uppercase tracking-wide text-brand-red/80">
+            {retainerService.pricingNote}
           </p>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -71,20 +109,20 @@ export default function ServicesPage() {
         </div>
       </ScrollScene>
 
-      <ScrollScene className="veil-0 py-20 text-ink md:py-28">
+      <ScrollScene className="veil-1 py-20 text-ink md:py-28">
         <MorphField className="pointer-events-none absolute right-10 top-16 hidden opacity-60 lg:block" />
         <div className="relative mx-auto max-w-6xl px-6">
-          <h2 className="text-2xl font-bold md:text-3xl">One-Time Services</h2>
-          <p className="mt-2 max-w-2xl text-ink/55">
-            Fixed packages for standard jobs, custom quotes for larger projects.
-          </p>
-
           <div className="mt-12">
             <PopRows
-              items={projectServices.map((service) => ({
+              items={remainingServices.map((service) => ({
                 key: service.slug,
                 title: service.title,
-                description: service.description,
+                description: (
+                  <>
+                    <span className="font-semibold text-ink">{service.tagline}</span>{" "}
+                    {service.description}
+                  </>
+                ),
                 sub: service.includes.join(" · "),
                 meta: service.pricingNote,
               }))}
@@ -94,7 +132,7 @@ export default function ServicesPage() {
       </ScrollScene>
 
       <ScrollScene
-        className="veil-1 py-24 md:py-32"
+        className="veil-0 py-24 md:py-32"
         bg={<div className="circuit-floor absolute inset-0" />}
       >
         <div className="relative mx-auto max-w-6xl px-6">

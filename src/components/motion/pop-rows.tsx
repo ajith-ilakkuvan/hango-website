@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, type ReactNode } from "react";
 import { motion } from "motion/react";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "@/lib/gsap";
@@ -13,7 +13,7 @@ const POP = { type: "spring", stiffness: 460, damping: 24, mass: 0.55 } as const
 export type PopRowItem = {
   key: string;
   title: string;
-  description: string;
+  description: ReactNode;
   /** Muted secondary line under the description. */
   sub?: string;
   /** Right-hand column, e.g. a pricing note. Replaces the arrow when set. */
